@@ -39,8 +39,8 @@ export const Route = createFileRoute("/$countryCode/")({
     }
   },
   head: () => {
-    const title = `Welcome to Medusa Store`
-    const description = `Discover our curated collection of products. Browse our latest featured items and shop with confidence.`
+    const title = `Soquio - Fresh Groceries Delivered`
+    const description = `Fresh food, better life. Discover the freshest groceries delivered straight to your doorstep. Quality produce, everyday essentials, and gourmet finds.`
 
     return {
       meta: [

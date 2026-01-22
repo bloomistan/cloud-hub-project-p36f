@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 @config "../../tailwind.config.js";
 @import "./theme.css";
 
 @layer base {
   :root {
-    @apply bg-white text-zinc-900 antialiased;
+    @apply bg-white text-gray-900 antialiased;
     text-rendering: optimizeLegibility;
   }
 }
@@ -14,6 +14,25 @@
   /* Content container */
   .content-container {
     @apply max-w-[1440px] w-full mx-auto px-6;
+  }
+
+  /* Soquio Button Styles */
+  .btn-primary {
+    @apply bg-soquio-blue text-white px-6 py-3 rounded-full font-semibold 
+           hover:bg-soquio-blue-dark transition-all duration-300 
+           hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-soquio-blue border-2 border-soquio-blue px-6 py-3 
+           rounded-full font-semibold hover:bg-soquio-blue hover:text-white 
+           transition-all duration-300;
+  }
+
+  .btn-accent {
+    @apply bg-soquio-red text-white px-6 py-3 rounded-full font-semibold 
+           hover:bg-soquio-red-dark transition-all duration-300 
+           hover:shadow-lg hover:-translate-y-0.5;
   }
 }
 
@@ -41,20 +60,31 @@
     @apply left-0;
   }
 
-  /* input:not([type="checkbox"]):-webkit-autofill,
-  input:not([type="checkbox"]):-webkit-autofill:hover,
-  input:not([type="checkbox"]):-webkit-autofill:focus,
-  textarea:-webkit-autofill,
-  textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus,
-  select:-webkit-autofill,
-  select:-webkit-autofill:hover,
-  select:-webkit-autofill:focus {
-    border: 1px solid #212121;
-    -webkit-text-fill-color: #212121;
-    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-    transition: background-color 5000s ease-in-out 0s;
-  } */
+  /* Stagger animation delays */
+  .stagger-1 {
+    animation-delay: 0.1s;
+  }
+  .stagger-2 {
+    animation-delay: 0.2s;
+  }
+  .stagger-3 {
+    animation-delay: 0.3s;
+  }
+  .stagger-4 {
+    animation-delay: 0.4s;
+  }
+  .stagger-5 {
+    animation-delay: 0.5s;
+  }
+  .stagger-6 {
+    animation-delay: 0.6s;
+  }
+  .stagger-7 {
+    animation-delay: 0.7s;
+  }
+  .stagger-8 {
+    animation-delay: 0.8s;
+  }
 }
 
 /* Navigation menu dropdown animations */

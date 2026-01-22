@@ -1,8 +1,21 @@
 @theme {
+  /* Soquio Brand Colors */
+  --color-soquio-blue: #1e40af;
+  --color-soquio-blue-dark: #1e3a8a;
+  --color-soquio-blue-light: #3b82f6;
+  --color-soquio-red: #dc2626;
+  --color-soquio-red-dark: #b91c1c;
+  --color-soquio-red-light: #ef4444;
+  --color-soquio-white: #ffffff;
+  --color-soquio-cream: #fef9f3;
+  --color-soquio-gray: #6b7280;
+  --color-soquio-gray-light: #f3f4f6;
+
   /* Font Family */
-  --font-sans:
-    Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Ubuntu, sans-serif;
+  --font-display: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Ubuntu, sans-serif;
 
   /* Animation */
   --animation-ring: ring 2.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -19,6 +32,10 @@
   --animation-enter: enter 200ms ease-out;
   --animation-slide-in: slide-in 1.2s cubic-bezier(0.41, 0.73, 0.51, 1.02);
   --animation-leave: leave 150ms ease-in forwards;
+  --animation-float: float 3s ease-in-out infinite;
+  --animation-pulse-soft: pulse-soft 2s ease-in-out infinite;
+  --animation-fade-up: fade-up 0.6s ease-out forwards;
+  --animation-scale-in: scale-in 0.4s ease-out forwards;
 
   /* Keyframes definitions */
   @keyframes ring {
@@ -116,6 +133,48 @@
     }
     100% {
       transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }
